@@ -1,0 +1,23 @@
+<h1>Dashboard</h1>
+<a href="/add">Add Employee</a> | <a href="/logout">Logout</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Address</th>
+        <th>Actions</th>
+    </tr>
+    {% for emp in employees %}
+    <tr>
+        <td>{{ emp[1] }}</td>
+        <td>{{ emp[2] }}</td>
+        <td>{{ emp[3] }}</td>
+        <td>{{ emp[4] }}</td>
+        <td>{{ emp[5] }}</td>
+        <td><a href="/edit_employee/{{ emp[0] }}">Edit</a></td>
+    </tr>
+    {% endfor %}
+</table>
